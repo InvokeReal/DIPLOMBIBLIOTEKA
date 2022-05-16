@@ -1,0 +1,38 @@
+﻿<Page x:Class="Библиотека.Frame.Поставщики"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Библиотека.Frame"
+      mc:Ignorable="d" 
+      d:DesignHeight="440" d:DesignWidth="600"
+      Title="Поставщики">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="22*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="2" Margin="6">
+            <TextBlock>Сортировка:</TextBlock>
+            <ComboBox x:Name="sortPT" SelectionChanged="SortPT_SelectionChanged">
+                <ComboBoxItem>Все</ComboBoxItem>
+                <ComboBoxItem>По возрастанию</ComboBoxItem>
+                <ComboBoxItem>По убыванию</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Height="40" Margin="136,7,313,3">
+            <TextBlock Margin="10,0,-10,0">Поиск:</TextBlock>
+            <TextBox x:Name="searchPT" TextChanged="SearchPT_TextChanged" Height="20" Width="140"></TextBox>
+        </StackPanel>
+        <Button x:Name="PostavDob" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Content="Добавить" Width="85"  Margin="419,20,0,0" Click="PostavDob_Click"/>
+        <Button x:Name="PostavUdal" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Content="Удалить" Width="85"  Margin="509,20,0,0" Click="PostavUdal_Click"/>
+        <DataGrid x:Name="dp" AutoGenerateColumns="False" IsReadOnly="False" SelectionChanged="Dp_SelectionChanged" Margin="25,0,239,10" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" Binding="{Binding Path=ID_поставщика}"/>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding Path=Наименование}"/>
+                <DataGridTextColumn Header="Страна" Binding="{Binding Path=Страна}"/>
+                <DataGridTextColumn Header="ИНН" Binding="{Binding Path=ИНН}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

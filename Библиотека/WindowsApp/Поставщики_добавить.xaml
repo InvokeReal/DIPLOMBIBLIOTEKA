@@ -1,0 +1,31 @@
+﻿<Window x:Class="Библиотека.WindowsApp.Поставщики_добавить"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Библиотека.WindowsApp"
+        mc:Ignorable="d"
+                Title="Добавить" Height="750" Width="550">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="20" Grid.ColumnSpan="2" Margin="180,37,125,69" TextAlignment="Center">Добавление поставщика</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Наименование:</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Страна:</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">ИНН:</TextBlock>
+        <TextBox x:Name="Наименование" Grid.Row="1" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="Страна" Grid.Row="2" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="ИНН" Grid.Row="3" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <Button x:Name="DobavPost" Content="Добавить" HorizontalAlignment="Center" Height="30" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Width="130" FontSize="18" Click="DobavPost_Click"></Button>
+        <Button x:Name="ExitPost" Content="Закрыть"  HorizontalAlignment="Center" Height="30" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Width="130" FontSize="18" Click="ExitPost_Click" ></Button>
+    </Grid>
+</Window>

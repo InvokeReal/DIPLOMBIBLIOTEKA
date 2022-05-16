@@ -1,0 +1,54 @@
+﻿<Page x:Class="Библиотека.Frame.Книги_подробно"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Библиотека.Frame"
+      mc:Ignorable="d" 
+      d:DesignHeight="440" d:DesignWidth="600"
+      Title="Книги">
+
+    <Grid>
+        <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="22*"/>
+            </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Width="100" Height="40" Margin="26,7,474,3">
+            <TextBlock Margin="2,0,-2,0"><Run Text="Фильтрация:"/></TextBlock>
+            <ComboBox x:Name="filtKNP" SelectionChanged="FiltKNP_SelectionChanged">
+                <ComboBoxItem Content="Все"/>
+                <ComboBoxItem Content="Комедия"/>
+                <ComboBoxItem Content="Трагедия"/>
+                <ComboBoxItem Content="Драма"/>
+                <ComboBoxItem Content="Ужасы"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Height="40" Margin="136,7,313,3">
+            <TextBlock Margin="10,0,-10,0">Поиск:</TextBlock>
+            <TextBox x:Name="searchKNP" TextChanged="SearchKNP_TextChanged" Height="20" Width="140"></TextBox>
+        </StackPanel>
+        <Button x:Name="KnigiDob" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Content="Добавить" Width="85"  Margin="419,20,0,0" Click="KnigiDob_Click"/>
+        <Button x:Name="KnigiUdal" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Content="Удалить" Width="85"  Margin="509,20,0,0" Click="KnigiUdal_Click"/>
+        <DataGrid x:Name="dk" AutoGenerateColumns="False" IsReadOnly="False" SelectionChanged="Dk_SelectionChanged"  Margin="10,0,30,10" Grid.Row="1">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="id" Binding="{Binding Path=ID_книги}"/>
+                    <DataGridTextColumn Header="Название" Binding="{Binding Path=Название}"/>
+                    <DataGridTextColumn Header="Цена" Binding="{Binding Path=Цена}"/>
+                    <DataGridTextColumn Header="Жанр" Binding="{Binding Path=Жанр}"/>
+                <DataGridTextColumn Header="Издатель" Binding="{Binding Path=Издатель}"/>
+                <DataGridTextColumn Header="Дата издания" Binding="{Binding Path=Дата_издания}"/>
+                <DataGridTextColumn Header="В наличии" Binding="{Binding Path=В_наличии}"/>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Path=Описание}"/>
+                <DataGridTextColumn Header="Фото" Binding="{Binding Path=Фото}"/>
+                <DataGridTextColumn Header="Поставщик книги" Binding="{Binding Path=Поставщик_книг}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="TovDob" Content="Купить" Click="TovDob_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+</Page>

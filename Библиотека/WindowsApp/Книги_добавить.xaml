@@ -1,0 +1,49 @@
+﻿<Window x:Class="Библиотека.WindowsApp.Книги_добавить"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Библиотека.WindowsApp"
+        mc:Ignorable="d"
+        Title="Добавить" Height="750" Width="550">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="20" Grid.ColumnSpan="2" Margin="180,24,169,10" TextAlignment="Center" Text="Добавление книги"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Название:</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Цена:</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Жанр:</TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Издатель:</TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Дата издания:</TextBlock>
+        <TextBlock Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">В наличии:</TextBlock>
+        <TextBlock Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Описание:</TextBlock>
+        <TextBlock Grid.Row="8" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Фото:</TextBlock>
+        <TextBlock Grid.Row="9" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Поставщик:</TextBlock>
+        <TextBox x:Name="Название" Grid.Row="1" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="Цена" Grid.Row="2" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="Жанр" Grid.Row="3" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="Издатель" Grid.Row="4" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="Дата_издания" Grid.Row="5" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="В_наличии" Grid.Row="6" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="Описание" Grid.Row="7" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="Фото" Grid.Row="8" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="Поставщик_книг" Grid.Row="9" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <Button x:Name="DobavKnig" Content="Добавить" HorizontalAlignment="Center" Height="30" Grid.Row="10" Grid.Column="0" VerticalAlignment="Center" Width="130" FontSize="18" Click="DobavKnig_Click"></Button>
+        <Button x:Name="ExitKnig" Content="Закрыть"  HorizontalAlignment="Center" Height="30" Grid.Row="10" Grid.Column="1" VerticalAlignment="Center" Width="130" FontSize="18" Click="ExitKnig_Click" ></Button>
+    </Grid>
+</Window>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="Библиотека.WindowsApp.Читатель_удалить"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Библиотека.WindowsApp"
+        mc:Ignorable="d"
+        Title="Удалить" Height="200" Width="225">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition />
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Margin="18,36,0,0" Width="161" FontSize="14">Вы действительно <LineBreak></LineBreak>хотите удалить запись?</TextBlock>
+        <Button x:Name="UdalChitat" Content="Да" Grid.Row="1" Grid.Column="1" Height="Auto" Margin="25,87,175,19" Click="UdalChitat_Click"/>
+        <Button x:Name="NeUdalChitat" Content="Отмена" Grid.Row="1" Grid.Column="1" Height="Auto" Margin="96,87,71,19" Click="NeUdalChitat_Click"/>
+    </Grid>
+</Window>

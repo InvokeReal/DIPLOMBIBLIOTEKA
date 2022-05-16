@@ -1,0 +1,40 @@
+﻿<Window x:Class="Библиотека.WindowsApp.История_заказов_добавить"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Библиотека.WindowsApp"
+        mc:Ignorable="d"
+        Title="Добавить" Height="750" Width="550">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="20" Grid.ColumnSpan="2" Margin="180,37,169,28" TextAlignment="Center">Заказ товара</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Количество:</TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Адрес доставки:</TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">ФИО получателя:</TextBlock>
+        <TextBlock Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Статус:</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Стоимость:</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Книга:</TextBlock>
+        <TextBox x:Name="Количество" Grid.Row="3" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="Адрес_доставки" Grid.Row="4" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="ФИО_получателя" Grid.Row="5" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="Статус" Grid.Row="6" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="Цена" Grid.Row="2" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <TextBox x:Name="Название_книги" Grid.Row="1" Grid.Column="1" Height="30" Width="150"></TextBox>
+        <Button x:Name="DobavIstZak" Content="Добавить" HorizontalAlignment="Center" Height="30" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" Width="130" FontSize="18" Click="DobavIstZak_Click"></Button>
+        <Button x:Name="ExitIstZak" Content="Закрыть"  HorizontalAlignment="Center" Height="30" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" Width="130" FontSize="18" Click="ExitIstZak_Click" ></Button>
+    </Grid>
+</Window>
